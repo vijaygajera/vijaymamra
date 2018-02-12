@@ -33,6 +33,7 @@ app_license = "MIT"
 
 # Home Pages
 # ----------
+fixtures = ["Custom Field", "Property Setter", "Print Format", "Report", "Custom Script","Letter Head"]
 
 # application home page (will override Website Settings)
 # home_page = "login"
