@@ -75,7 +75,9 @@ fixtures = ["Custom Field", "Property Setter", "Print Format", "Report", "Custom
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
-
+doctype_js={
+	"Sales Order":"vijaymamra/custom_script/sales_order/sales_order.js",
+	"Sales Invoice":"vijaymamra/custom_script/sales_invoice/sales_invoice.js"
 # Document Events
 # ---------------
 # Hook on document methods and events
