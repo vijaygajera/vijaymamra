@@ -7,5 +7,5 @@ import decimal
 def calculate_row_quantity(bag_qty, rate, uom):
 	bag = float(bag_qty)
 	conv_factor = float(uom)
-	row_qty = bag / conv_factor
+	row_qty = bag * conv_factor
 	return round(row_qty)
