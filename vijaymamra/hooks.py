@@ -77,7 +77,6 @@ fixtures = ["Custom Field", "Property Setter", "Print Format", "Report", "Custom
 # }
 doctype_js={
 	"Sales Order":"vijaymamra/custom_script/sales_order/sales_order.js",
-	"Sales Invoice":"vijaymamra/custom_script/sales_invoice/sales_invoice.js"
 # Document Events
 # ---------------
 # Hook on document methods and events
