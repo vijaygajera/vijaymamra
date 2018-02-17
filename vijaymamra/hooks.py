@@ -83,11 +83,6 @@ doctype_js={
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-	"Sales Invoice": {
-		"validate": "vijaymamra.vijaymamra.custom_script.sales_invoice.sales_invoice.calculate_qty"
-	}
-}
 
 # doc_events = {
 # 	"*": {
