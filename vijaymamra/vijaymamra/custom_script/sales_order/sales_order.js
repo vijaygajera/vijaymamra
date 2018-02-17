@@ -11,7 +11,7 @@ frappe.ui.form.on("Sales Order Item", {
 				frappe.call({
 						method:"vijaymamra.vijaymamra.custom_script.sales_order.sales_order.calculate_row_quantity",
 						args:{
-							"bag_qty": child.quantity_of_bags,
+							"bag_qty": child.bag,
 							"rate": child.rate,
 							"uom": child.conversion_factor
 						},
