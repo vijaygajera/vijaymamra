@@ -7,5 +7,14 @@
   "name": "Sales Order-Client", 
   "script": "cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag')\nfrappe.ui.form.on(\"Sales Order Item\", \"bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\nfrappe.ui.form.on(\"Sales Order Item\", \"weight_per_bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});", 
   "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sales Invoice", 
+  "modified": "2018-02-19 18:38:21.067450", 
+  "name": "Sales Invoice-Client", 
+  "script": "cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag')\nfrappe.ui.form.on(\"Sales Invoice Item\", \"bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\nfrappe.ui.form.on(\"Sales Invoice Item\", \"weight_per_bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});", 
+  "script_type": "Client"
  }
 ]
