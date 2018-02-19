@@ -1,1 +1,11 @@
-[]
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sales Order", 
+  "modified": "2018-02-18 16:36:52.798469", 
+  "name": "Sales Order-Client", 
+  "script": "cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag')\nfrappe.ui.form.on(\"Sales Order Item\", \"bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\nfrappe.ui.form.on(\"Sales Order Item\", \"weight_per_bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});", 
+  "script_type": "Client"
+ }
+]
