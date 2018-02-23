@@ -8,7 +8,7 @@ erpnext.SMSManager = function SMSManager(doc) {
 			'Lead'				: '',
 			'Opportunity'			: 'Your enquiry has been logged into the system. Ref No: ' + doc.name,
 			'Quotation'			: 'Quotation ' + doc.name + ' has been sent via email. Thanks!',
-			'Sales Order'		: 'Sales Order ' + doc.name + ' has been created against From Vijay Mamra Pvt. Ltd.'
+			'Sales Order'		: 'Sales Order ' + doc.name + ' This is TEST MAssage From Vijay Mamra Pvt. Ltd.'
 						+ (doc.quotation_no ? ('Quote No:' + doc.quotation_no) : '')
 						+ (doc.po_no ? (' for your PO: ' + doc.po_no) : ''),
 			'Delivery Note'		: 'Items has been delivered against delivery note: ' + doc.name
