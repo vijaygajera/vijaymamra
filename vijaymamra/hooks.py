@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from . import __version__ as app_version
 
@@ -24,7 +24,7 @@ app_license = "MIT"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
-page_js = {"sms_manager" : "vijaymamra/Public/js/sms_manager.js"}
+
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -75,10 +75,7 @@ fixtures = ["Custom Field", "Property Setter", "Print Format", "Report", "Custom
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
-doctype_js={
-	"Sales Order":"vijaymamra/custom_script/sales_order/sales_order.js",
-	"Sales Invoice":"vijaymamra/custom_script/sales_invoice/sales_invoice.js",
-	}
+
 # Document Events
 # ---------------
 # Hook on document methods and events
