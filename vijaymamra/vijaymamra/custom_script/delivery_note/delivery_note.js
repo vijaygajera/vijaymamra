@@ -17,7 +17,7 @@ frappe.ui.form.on("Delivery Note Item", {
 
 				frappe.call({
 
-						method:"vijaymamra/vijaymamra/vijaymamra/custom_script/delivery_note/delivery_note.py"
+						method:"vijaymamra/vijaymamra/custom_script/delivery_note/delivery_note.py"
 						args:{
 
 							"bag_qty": child.bag,
