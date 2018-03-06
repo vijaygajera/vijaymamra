@@ -22,10 +22,9 @@ frappe.ui.form.on("Delivery Note Item", {
 
 							"bag_qty": child.bag,
 
-							"rate": child.rate,
+							"weight_per_bag": child.weight_per_bag,
 
-							"uom": child.conversion_factor
-
+							
 						},
 
 						callback: function(r) {
