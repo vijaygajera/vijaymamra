@@ -26,7 +26,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Delivery Note" : "vijaymamra/vijaymamra/public/js/delivery_note.js"}
+# doctype_js = {"Delivery Note" : "vijaymamra/vijaymamra/public/js/delivery_note.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -67,7 +67,9 @@ fixtures = ["Custom Field", "Property Setter", "Print Format", "Report", "Custom
 # Permissions
 # -----------
 # Permissions evaluated in scripted ways
-
+doctype_js={
+	"Delivery Note":"patanjali/custom_script/delivery_note/delivery_note.js"}
+	
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
