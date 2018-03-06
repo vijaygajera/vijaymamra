@@ -10,13 +10,13 @@ import decimal
 
 @frappe.whitelist()
 
-def calculate_row_quantity(bag_qty, rate, uom):
+def calculate_row_quantity(bag_qty, weight_per_bag):
 
 	bag = float(bag_qty)
 
-	conv_factor = float(uom)
+	weight_per_bag = float(weight_per_bag)
 
-	row_qty = bag * conv_factor
+	row_qty = bag * weight_per_bag
 
 	return round(row_qty)
 
