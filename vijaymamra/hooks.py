@@ -68,7 +68,7 @@ fixtures = ["Custom Field", "Property Setter", "Print Format", "Report", "Custom
 # -----------
 # Permissions evaluated in scripted ways
 doctype_js={
-	"Delivery Note":"patanjali/custom_script/delivery_note/delivery_note.js"}
+	"Delivery Note":"vijaymamra/custom_script/delivery_note/delivery_note.js"}
 	
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
