@@ -1,5 +1,5 @@
 # cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag');
-
+frappe.ui.form.on("Delivery Note", "customer" , consol_log("=========="));
 
 frappe.ui.form.on("Delivery Note Item", "bag", function(frm, cdt, cdn) {
 	var child = locals[cdt][cdn];
