@@ -3,9 +3,9 @@
   "docstatus": 0, 
   "doctype": "Custom Script", 
   "dt": "Sales Order", 
-  "modified": "2018-02-28 15:21:26.417496", 
+  "modified": "2018-03-06 19:04:16.710927", 
   "name": "Sales Order-Client", 
-  "script": "cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag')\nfrappe.ui.form.on(\"Sales Order Item\", \"bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\nfrappe.ui.form.on(\"Sales Order Item\", \"weight_per_bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\n\nfrappe.ui.form.on(\"Sales Order Item\", \"bag\", function(frm, cdt, cdn) {\n\t// code for calculate total and set on parent field.\n\tgrand_total = 0;\n\t$.each(frm.doc.items || [], function(i, d) {\n\t\tgrand_total += flt(d.bag);\n\t});\n\tfrm.set_value(\"total_bag\", grand_total);\n});", 
+  "script": "cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag')\nfrappe.ui.form.on(\"Sales Order Item\", \"bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\nfrappe.ui.form.on(\"Sales Order Item\", \"weight_per_bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\n\nfrappe.ui.form.on(\"Sales Order Item\", \"bag\", function(frm, cdt, cdn) {\n\t// code for calculate total and set on parent field.\n\tgrand_total = 0;\n\t$.each(frm.doc.items || [], function(i, d) {\n\t\tgrand_total += flt(d.bag);\n\t});\n\tfrm.set_value(\"total_bag\", grand_total);\n});\n\nfrappe.ui.form.on('Sales Order', 'sms', function(frm){\n  var message = '[Test] Order No: ' + frm.doc.name + ' has been accepted against ' + (frm.doc.po_no ? ('your PO No: ' + frm.doc.po_no + ' and ') : '');\n\nconsole.log(message);\n  frappe.call({\n    method: \"frappe.core.doctype.sms_settings.sms_settings.send_sms\",\n    args: {\n      receiver_list: [frm.doc.contact_mobile],\n      msg: message,\n    },\n    callback: function(r) {\n      if(r.exc) {msgprint(r.exc); return;}\n    }\n  });\n\n\n})", 
   "script_type": "Client"
  }, 
  {
@@ -15,6 +15,15 @@
   "modified": "2018-02-28 16:30:58.954800", 
   "name": "Sales Invoice-Client", 
   "script": "cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag')\nfrappe.ui.form.on(\"Sales Invoice Item\", \"bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\nfrappe.ui.form.on(\"Sales Invoice Item\", \"weight_per_bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n});\nfrappe.ui.form.on(\"Sales Invoice Item\", \"bag\", function(frm, cdt, cdn) {\n\t// code for calculate total and set on parent field.\n\tgrand_total = 0;\n\t$.each(frm.doc.items || [], function(i, d) {\n\t\tgrand_total += flt(d.bag);\n\t});\n\tfrm.set_value(\"total_bag\", grand_total);\n});", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Delivery Note", 
+  "modified": "2018-03-06 16:50:59.300366", 
+  "name": "Delivery Note-Client", 
+  "script": "cur_frm.add_fetch('item_code', 'weight_per_bag', 'weight_per_bag');\n\n\nfrappe.ui.form.on(\"Delivery Note Item\", \"bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)\n\t\n});\nfrappe.ui.form.on(\"Delivery Note Item\", \"weight_per_bag\", function(frm, cdt, cdn) {\n\tvar child = locals[cdt][cdn];\n\tresult_value = child.bag * child.weight_per_bag;\n\tfrappe.model.set_value(cdt, cdn, \"qty\", result_value)});\n\n\n\n", 
   "script_type": "Client"
  }
 ]
