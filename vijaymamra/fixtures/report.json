@@ -7,101 +7,14 @@
   "doctype": "Report", 
   "is_standard": "Yes", 
   "javascript": null, 
-  "json": null, 
-  "letter_head": "test", 
-  "modified": "2018-01-02 17:56:15.379347", 
-  "module": "Regional", 
-  "name": "GSTR-1", 
-  "query": null, 
-  "ref_doctype": "GL Entry", 
-  "report_name": "GSTR-1", 
-  "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Accounts User"
-   }, 
-   {
-    "role": "Accounts Manager"
-   }, 
-   {
-    "role": "Auditor"
-   }
-  ]
- }, 
- {
-  "add_total_row": 0, 
-  "apply_user_permissions": 1, 
-  "disabled": 0, 
-  "docstatus": 0, 
-  "doctype": "Report", 
-  "is_standard": "Yes", 
-  "javascript": null, 
-  "json": null, 
+  "json": "{\"add_total_row\": 0, \"sort_by\": \"Serial No.modified\", \"sort_order\": \"desc\", \"sort_by_next\": null, \"filters\": [[\"Serial No\", \"delivery_document_type\", \"in\", [\"Delivery Note\", \"Sales Invoice\"]], [\"Serial No\", \"warehouse\", \"=\", \"\"]], \"sort_order_next\": \"desc\", \"columns\": [[\"name\", \"Serial No\"], [\"item_code\", \"Serial No\"], [\"warranty_expiry_date\", \"Serial No\"], [\"warranty_period\", \"Serial No\"], [\"maintenance_status\", \"Serial No\"], [\"purchase_document_no\", \"Serial No\"], [\"purchase_date\", \"Serial No\"], [\"supplier\", \"Serial No\"], [\"supplier_name\", \"Serial No\"], [\"delivery_document_no\", \"Serial No\"], [\"delivery_date\", \"Serial No\"], [\"customer\", \"Serial No\"], [\"customer_name\", \"Serial No\"], [\"item_name\", \"Serial No\"], [\"description\", \"Serial No\"], [\"item_group\", \"Serial No\"], [\"brand\", \"Serial No\"]]}", 
   "letter_head": null, 
-  "modified": "2018-01-29 12:59:55.650445", 
-  "module": "Regional", 
-  "name": "GSTR-2", 
-  "query": null, 
-  "ref_doctype": "GL Entry", 
-  "report_name": "GSTR-2", 
-  "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Accounts User"
-   }, 
-   {
-    "role": "Accounts Manager"
-   }, 
-   {
-    "role": "Auditor"
-   }
-  ]
- }, 
- {
-  "add_total_row": 0, 
-  "apply_user_permissions": 1, 
-  "disabled": 0, 
-  "docstatus": 0, 
-  "doctype": "Report", 
-  "is_standard": "Yes", 
-  "javascript": null, 
-  "json": null, 
-  "letter_head": null, 
-  "modified": "2018-02-19 12:03:53.902167", 
+  "modified": "2017-02-24 20:01:53.097456", 
   "module": "Stock", 
-  "name": "Item Balance (Simple)", 
-  "query": "select a.item_code as \"Item:Link/Item:120\",\n\t  a.item_name as \"Item Name::150\",\n\t  a.item_group as \"Item Group:Link/Item Group:120\",\n\t  a.brand as \"Brand:Link/Brand:120\",\n\t  a.description as \"Description::150\",\n\t  b.warehouse as \"Warehouse:Link/Warehouse:120\",\n\t  b.actual_qty as \"Balance Qty:Float:140\"\n from `tabItem` a left join `tabBin` b\n ON a.item_code = b.item_code", 
-  "ref_doctype": "Bin", 
-  "report_name": "Item Balance (Simple)", 
-  "report_type": "Query Report", 
-  "roles": [
-   {
-    "role": "Sales User"
-   }, 
-   {
-    "role": "Purchase User"
-   }, 
-   {
-    "role": "Stock User"
-   }
-  ]
- }, 
- {
-  "add_total_row": 0, 
-  "apply_user_permissions": 1, 
-  "disabled": 0, 
-  "docstatus": 0, 
-  "doctype": "Report", 
-  "is_standard": "Yes", 
-  "javascript": null, 
-  "json": "{\"add_total_row\": 0, \"sort_by\": \"Serial No.name\", \"sort_order\": \"desc\", \"sort_by_next\": null, \"filters\": [], \"sort_order_next\": \"desc\", \"columns\": [[\"name\", \"Serial No\"], [\"item_code\", \"Serial No\"], [\"warehouse\", \"Serial No\"], [\"item_name\", \"Serial No\"], [\"description\", \"Serial No\"], [\"item_group\", \"Serial No\"], [\"brand\", \"Serial No\"], [\"purchase_document_type\", \"Serial No\"], [\"purchase_document_no\", \"Serial No\"], [\"purchase_date\", \"Serial No\"], [\"customer\", \"Serial No\"], [\"customer_name\", \"Serial No\"], [\"purchase_rate\", \"Serial No\"], [\"delivery_document_type\", \"Serial No\"], [\"delivery_document_no\", \"Serial No\"], [\"delivery_date\", \"Serial No\"], [\"supplier\", \"Serial No\"], [\"supplier_name\", \"Serial No\"]]}", 
-  "letter_head": null, 
-  "modified": "2017-02-24 19:54:21.392265", 
-  "module": "Stock", 
-  "name": "Serial No Status", 
+  "name": "Serial No Warranty Expiry", 
   "query": null, 
   "ref_doctype": "Serial No", 
-  "report_name": "Serial No Status", 
+  "report_name": "Serial No Warranty Expiry", 
   "report_type": "Report Builder", 
   "roles": [
    {
@@ -152,14 +65,14 @@
   "doctype": "Report", 
   "is_standard": "Yes", 
   "javascript": null, 
-  "json": "{\"add_total_row\": 0, \"sort_by\": \"Serial No.modified\", \"sort_order\": \"desc\", \"sort_by_next\": null, \"filters\": [[\"Serial No\", \"delivery_document_type\", \"in\", [\"Delivery Note\", \"Sales Invoice\"]], [\"Serial No\", \"warehouse\", \"=\", \"\"]], \"sort_order_next\": \"desc\", \"columns\": [[\"name\", \"Serial No\"], [\"item_code\", \"Serial No\"], [\"warranty_expiry_date\", \"Serial No\"], [\"warranty_period\", \"Serial No\"], [\"maintenance_status\", \"Serial No\"], [\"purchase_document_no\", \"Serial No\"], [\"purchase_date\", \"Serial No\"], [\"supplier\", \"Serial No\"], [\"supplier_name\", \"Serial No\"], [\"delivery_document_no\", \"Serial No\"], [\"delivery_date\", \"Serial No\"], [\"customer\", \"Serial No\"], [\"customer_name\", \"Serial No\"], [\"item_name\", \"Serial No\"], [\"description\", \"Serial No\"], [\"item_group\", \"Serial No\"], [\"brand\", \"Serial No\"]]}", 
+  "json": "{\"add_total_row\": 0, \"sort_by\": \"Serial No.name\", \"sort_order\": \"desc\", \"sort_by_next\": null, \"filters\": [], \"sort_order_next\": \"desc\", \"columns\": [[\"name\", \"Serial No\"], [\"item_code\", \"Serial No\"], [\"warehouse\", \"Serial No\"], [\"item_name\", \"Serial No\"], [\"description\", \"Serial No\"], [\"item_group\", \"Serial No\"], [\"brand\", \"Serial No\"], [\"purchase_document_type\", \"Serial No\"], [\"purchase_document_no\", \"Serial No\"], [\"purchase_date\", \"Serial No\"], [\"customer\", \"Serial No\"], [\"customer_name\", \"Serial No\"], [\"purchase_rate\", \"Serial No\"], [\"delivery_document_type\", \"Serial No\"], [\"delivery_document_no\", \"Serial No\"], [\"delivery_date\", \"Serial No\"], [\"supplier\", \"Serial No\"], [\"supplier_name\", \"Serial No\"]]}", 
   "letter_head": null, 
-  "modified": "2017-02-24 20:01:53.097456", 
+  "modified": "2017-02-24 19:54:21.392265", 
   "module": "Stock", 
-  "name": "Serial No Warranty Expiry", 
+  "name": "Serial No Status", 
   "query": null, 
   "ref_doctype": "Serial No", 
-  "report_name": "Serial No Warranty Expiry", 
+  "report_name": "Serial No Status", 
   "report_type": "Report Builder", 
   "roles": [
    {
@@ -742,11 +655,26 @@
   "ref_doctype": "Student Attendance", 
   "report_name": "Absent Student Report", 
   "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Academics User"
-   }
-  ]
+  "roles": []
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "Yes", 
+  "javascript": null, 
+  "json": null, 
+  "letter_head": null, 
+  "modified": "2017-11-10 19:42:43.376658", 
+  "module": "Education", 
+  "name": "Student Monthly Attendance Sheet", 
+  "query": null, 
+  "ref_doctype": "Student Attendance", 
+  "report_name": "Student Monthly Attendance Sheet", 
+  "report_type": "Script Report", 
+  "roles": []
  }, 
  {
   "add_total_row": 0, 
@@ -774,29 +702,6 @@
    }, 
    {
     "role": "HR Manager"
-   }
-  ]
- }, 
- {
-  "add_total_row": 0, 
-  "apply_user_permissions": 1, 
-  "disabled": 0, 
-  "docstatus": 0, 
-  "doctype": "Report", 
-  "is_standard": "Yes", 
-  "javascript": null, 
-  "json": null, 
-  "letter_head": null, 
-  "modified": "2017-11-10 19:42:43.376658", 
-  "module": "Education", 
-  "name": "Student Monthly Attendance Sheet", 
-  "query": null, 
-  "ref_doctype": "Student Attendance", 
-  "report_name": "Student Monthly Attendance Sheet", 
-  "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Academics User"
    }
   ]
  }, 
@@ -1109,7 +1014,7 @@
   ]
  }, 
  {
-  "add_total_row": 0, 
+  "add_total_row": 1, 
   "apply_user_permissions": 1, 
   "disabled": 0, 
   "docstatus": 0, 
@@ -1118,7 +1023,7 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-02-24 20:15:33.967044", 
+  "modified": "2018-02-21 01:28:14.928929", 
   "module": "Selling", 
   "name": "Quotation Trends", 
   "query": null, 
@@ -1141,7 +1046,7 @@
   ]
  }, 
  {
-  "add_total_row": 0, 
+  "add_total_row": 1, 
   "apply_user_permissions": 1, 
   "disabled": 0, 
   "docstatus": 0, 
@@ -1150,7 +1055,7 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-02-24 20:18:32.793637", 
+  "modified": "2018-02-21 01:28:47.049042", 
   "module": "Stock", 
   "name": "Delivery Note Trends", 
   "query": null, 
@@ -1173,7 +1078,7 @@
   ]
  }, 
  {
-  "add_total_row": 0, 
+  "add_total_row": 1, 
   "apply_user_permissions": 1, 
   "disabled": 0, 
   "docstatus": 0, 
@@ -1182,7 +1087,7 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-02-24 20:15:01.634392", 
+  "modified": "2018-02-20 08:05:46.191588", 
   "module": "Selling", 
   "name": "Sales Order Trends", 
   "query": null, 
@@ -1208,7 +1113,7 @@
   ]
  }, 
  {
-  "add_total_row": 0, 
+  "add_total_row": 1, 
   "apply_user_permissions": 1, 
   "disabled": 0, 
   "docstatus": 0, 
@@ -1217,7 +1122,7 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-02-24 20:15:12.885723", 
+  "modified": "2018-02-21 01:28:03.622485", 
   "module": "Accounts", 
   "name": "Sales Invoice Trends", 
   "query": null, 
@@ -1234,7 +1139,7 @@
   ]
  }, 
  {
-  "add_total_row": 0, 
+  "add_total_row": 1, 
   "apply_user_permissions": 1, 
   "disabled": 0, 
   "docstatus": 0, 
@@ -1243,7 +1148,7 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-02-24 20:16:13.121638", 
+  "modified": "2018-02-21 01:28:37.416562", 
   "module": "Buying", 
   "name": "Purchase Order Trends", 
   "query": null, 
@@ -1263,7 +1168,7 @@
   ]
  }, 
  {
-  "add_total_row": 0, 
+  "add_total_row": 1, 
   "apply_user_permissions": 1, 
   "disabled": 0, 
   "docstatus": 0, 
@@ -1272,7 +1177,7 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-02-24 20:16:00.211762", 
+  "modified": "2018-02-21 01:28:22.682161", 
   "module": "Stock", 
   "name": "Purchase Receipt Trends", 
   "query": null, 
@@ -1295,7 +1200,7 @@
   ]
  }, 
  {
-  "add_total_row": 0, 
+  "add_total_row": 1, 
   "apply_user_permissions": 1, 
   "disabled": 0, 
   "docstatus": 0, 
@@ -1304,7 +1209,7 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-02-24 20:16:25.027061", 
+  "modified": "2018-02-21 01:28:31.261299", 
   "module": "Accounts", 
   "name": "Purchase Invoice Trends", 
   "query": null, 
@@ -2507,11 +2412,7 @@
   "ref_doctype": "Fees", 
   "report_name": "Student Fee Collection", 
   "report_type": "Query Report", 
-  "roles": [
-   {
-    "role": "Academics User"
-   }
-  ]
+  "roles": []
  }, 
  {
   "add_total_row": 0, 
@@ -2675,11 +2576,7 @@
   "ref_doctype": "Student Attendance", 
   "report_name": "Student Batch-Wise Attendance", 
   "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Academics User"
-   }
-  ]
+  "roles": []
  }, 
  {
   "add_total_row": 0, 
@@ -2886,14 +2783,7 @@
   "ref_doctype": "Program Enrollment", 
   "report_name": "Student and Guardian Contact Details", 
   "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Instructor"
-   }, 
-   {
-    "role": "Academics User"
-   }
-  ]
+  "roles": []
  }, 
  {
   "add_total_row": 0, 
@@ -2992,18 +2882,14 @@
   "javascript": null, 
   "json": null, 
   "letter_head": null, 
-  "modified": "2017-11-10 19:41:46.641227", 
+  "modified": "2018-02-08 15:11:24.904628", 
   "module": "Education", 
   "name": "Course wise Assessment Report", 
   "query": null, 
   "ref_doctype": "Assessment Result", 
   "report_name": "Course wise Assessment Report", 
   "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Academics User"
-   }
-  ]
+  "roles": []
  }, 
  {
   "add_total_row": 1, 
@@ -3205,11 +3091,7 @@
   "ref_doctype": "Assessment Plan", 
   "report_name": "Assessment Plan Status", 
   "report_type": "Script Report", 
-  "roles": [
-   {
-    "role": "Academics User"
-   }
-  ]
+  "roles": []
  }, 
  {
   "add_total_row": 0, 
@@ -3308,8 +3190,37 @@
   "is_standard": "Yes", 
   "javascript": null, 
   "json": null, 
+  "letter_head": "test", 
+  "modified": "2018-01-02 17:56:15.379347", 
+  "module": "Regional", 
+  "name": "GSTR-1", 
+  "query": null, 
+  "ref_doctype": "GL Entry", 
+  "report_name": "GSTR-1", 
+  "report_type": "Script Report", 
+  "roles": [
+   {
+    "role": "Accounts User"
+   }, 
+   {
+    "role": "Accounts Manager"
+   }, 
+   {
+    "role": "Auditor"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "Yes", 
+  "javascript": null, 
+  "json": null, 
   "letter_head": "Shishuvan Secondary School", 
-  "modified": "2018-01-22 17:04:43.412054", 
+  "modified": "2018-02-08 15:11:35.339434", 
   "module": "Education", 
   "name": "Final Assessment Grades", 
   "query": null, 
@@ -3317,5 +3228,63 @@
   "report_name": "Final Assessment Grades", 
   "report_type": "Script Report", 
   "roles": []
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "Yes", 
+  "javascript": null, 
+  "json": null, 
+  "letter_head": null, 
+  "modified": "2018-01-29 12:59:55.650445", 
+  "module": "Regional", 
+  "name": "GSTR-2", 
+  "query": null, 
+  "ref_doctype": "GL Entry", 
+  "report_name": "GSTR-2", 
+  "report_type": "Script Report", 
+  "roles": [
+   {
+    "role": "Accounts User"
+   }, 
+   {
+    "role": "Accounts Manager"
+   }, 
+   {
+    "role": "Auditor"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "Yes", 
+  "javascript": null, 
+  "json": null, 
+  "letter_head": null, 
+  "modified": "2018-02-19 12:03:53.902167", 
+  "module": "Stock", 
+  "name": "Item Balance (Simple)", 
+  "query": "select a.item_code as \"Item:Link/Item:120\",\n\t  a.item_name as \"Item Name::150\",\n\t  a.item_group as \"Item Group:Link/Item Group:120\",\n\t  a.brand as \"Brand:Link/Brand:120\",\n\t  a.description as \"Description::150\",\n\t  b.warehouse as \"Warehouse:Link/Warehouse:120\",\n\t  b.actual_qty as \"Balance Qty:Float:140\"\n from `tabItem` a left join `tabBin` b\n ON a.item_code = b.item_code", 
+  "ref_doctype": "Bin", 
+  "report_name": "Item Balance (Simple)", 
+  "report_type": "Query Report", 
+  "roles": [
+   {
+    "role": "Sales User"
+   }, 
+   {
+    "role": "Purchase User"
+   }, 
+   {
+    "role": "Stock User"
+   }
+  ]
  }
 ]
